@@ -108,7 +108,7 @@ Key areas include:
 ```text
 zorvintech-website/
 │
-├── Index.html
+├── index.html
 │
 └── images/
     └── zorvin-logo.png
