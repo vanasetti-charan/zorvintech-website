@@ -1,0 +1,4207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Zorvintech Private Limited provides technology, digital accessibility, AI, web, mobile, cloud, consulting and business services across India.">
+
+    <title>Zorvintech Private Limited | Technology • Accessibility • Innovation</title>
+
+        <link
+        rel="icon"
+        type="image/png"
+        href="images/zorvintech-logo.ico"
+    >
+
+    <style>
+        /* =========================================================
+           ROOT
+        ========================================================= */
+
+        :root {
+            --primary: #1769d8;
+            --primary-dark: #0d4fae;
+            --blue: #1f83ff;
+            --cyan: #20c8e8;
+            --yellow: #ffd92f;
+
+            --text: #172238;
+            --muted: #5f6b7a;
+
+            --white: #ffffff;
+            --soft: #f6f9fd;
+            --border: #dbe5f1;
+
+            --shadow: 0 15px 45px rgba(37, 72, 125, .10);
+
+            --radius: 18px;
+            --max-width: 1200px;
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family:
+                Inter,
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+                radial-gradient(circle at 80% 10%,
+                    rgba(30, 130, 255, .08),
+                    transparent 25%),
+
+                radial-gradient(circle at 20% 40%,
+                    rgba(255, 210, 40, .06),
+                    transparent 25%),
+
+                #ffffff;
+
+            overflow-x: hidden;
+
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+
+        /* =========================================================
+           CONTAINER
+        ========================================================= */
+
+        .container {
+            width: min(var(--max-width),
+                calc(100% - 50px));
+
+            margin: auto;
+        }
+
+        .section {
+            padding: 85px 0;
+        }
+
+        .eyebrow {
+            color: var(--primary);
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.2;
+        }
+
+
+        /* =========================================================
+           BUTTONS
+        ========================================================= */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            padding: 14px 24px;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            color: white;
+
+            background:
+                linear-gradient(135deg,
+                    #287cf2,
+                    #1253bd);
+
+            box-shadow:
+                0 10px 25px rgba(30, 100, 220, .22);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 30px rgba(30, 100, 220, .30);
+        }
+
+        .btn-outline {
+            border: 1px solid #cbd8e8;
+            color: #24334a;
+            background: white;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================================
+           HEADER
+        ========================================================= */
+
+        header {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 86px;
+
+            z-index: 1000;
+
+            background:
+                rgba(255, 255, 255, .94);
+
+            backdrop-filter: blur(15px);
+
+            border-bottom:
+                1px solid rgba(210, 220, 235, .7);
+        }
+
+        .nav {
+            height: 86px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        /* =========================================================
+           BRAND
+        ========================================================= */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            min-width: 0;
+        }
+
+        .brand img {
+            width: 48px;
+            height: 48px;
+
+            object-fit: contain;
+
+            flex-shrink: 0;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+
+            line-height: 1.05;
+        }
+
+        .brand-name {
+            font-size: 22px;
+            font-weight: 800;
+
+            color: #051630;
+
+            white-space: nowrap;
+        }
+
+        .brand-name .tech {
+            color: #877ef1;
+        }
+
+        .private {
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 1.1px;
+
+            color: #34445b;
+
+            margin-top: 4px;
+        }
+
+        .brand-tag {
+            display: block;
+
+            font-size: 10px;
+
+            font-weight: 600;
+
+            color: #697586;
+
+            letter-spacing: .3px;
+
+            margin-top: 6px;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+
+            color: #303b4b;
+
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+
+            width: 0;
+            height: 2px;
+
+            background: var(--primary);
+
+            bottom: -9px;
+            left: 0;
+
+            transition: .3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .menu-btn {
+            display: none;
+
+            border: 1px solid var(--border);
+
+            background: white;
+
+            padding: 8px 12px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 20px;
+        }
+
+        .mobile-menu {
+            display: none;
+
+            background: white;
+
+            border-top:
+                1px solid var(--border);
+        }
+
+        .mobile-menu a {
+            display: block;
+
+            padding: 15px 25px;
+
+            border-bottom:
+                1px solid #edf1f6;
+
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 100px;
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 5;
+        }
+
+        .hero h1 {
+            font-size:
+                clamp(44px, 5vw, 70px);
+
+            line-height: 1.1;
+
+            letter-spacing: -2px;
+
+            max-width: 650px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            max-width: 550px;
+
+            color: var(--muted);
+
+            margin-top: 20px;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+
+            gap: 15px;
+
+            margin-top: 28px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* =========================================================
+           HERO FEATURES
+        ========================================================= */
+
+        .hero-features {
+            display: flex;
+
+            gap: 25px;
+
+            margin-top: 35px;
+        }
+
+        .hero-feature {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding-right: 20px;
+
+            border-right:
+                1px solid #d8e0ea;
+
+            font-size: 14px;
+
+            color: #3e4a5b;
+
+            line-height: 1.4;
+        }
+
+        .hero-feature:last-child {
+            border-right: none;
+        }
+
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            border: 1px solid #9bc5ff;
+
+            color: var(--primary);
+
+            background:
+                rgba(230, 242, 255, .7);
+
+            font-size: 19px;
+        }
+
+
+        /* =========================================================
+           HERO VISUAL
+        ========================================================= */
+
+        .hero-visual {
+            position: relative;
+
+            min-height: 530px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .network {
+            position: absolute;
+            inset: 0;
+
+            background-image:
+                radial-gradient(circle,
+                    #2f9fff 2px,
+                    transparent 2px);
+
+            background-size: 70px 70px;
+
+            opacity: .25;
+
+            mask-image:
+                radial-gradient(circle,
+                    black,
+                    transparent 72%);
+        }
+
+        .orbit {
+            position: absolute;
+
+            width: 430px;
+            height: 430px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(30, 120, 230, .12);
+
+            animation:
+                rotate 25s linear infinite;
+        }
+
+        .orbit::before {
+            content: "";
+
+            position: absolute;
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #2ba9ff;
+
+            top: 40px;
+            left: 70px;
+
+            box-shadow:
+                0 0 15px #2ba9ff;
+        }
+
+        .logo-glow {
+            position: absolute;
+
+            width: 360px;
+            height: 360px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(circle,
+                    rgba(30, 135, 255, .20),
+                    transparent 68%);
+
+            filter: blur(20px);
+        }
+
+        .hero-logo {
+            width: 330px;
+
+            position: relative;
+
+            z-index: 4;
+
+            filter:
+                drop-shadow(0 20px 35px rgba(20, 70, 140, .18));
+
+            animation:
+                float 5s ease-in-out infinite;
+        }
+
+        .platform {
+            position: absolute;
+
+            bottom: 60px;
+
+            width: 390px;
+            height: 65px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(ellipse,
+                    rgba(30, 120, 255, .15),
+                    transparent 65%);
+
+            border-top:
+                2px solid rgba(30, 125, 230, .6);
+
+            box-shadow:
+                0 15px 30px rgba(30, 100, 180, .10);
+        }
+
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-section {
+            background: #f8fbff;
+        }
+
+        .about-main {
+            display: grid;
+
+            grid-template-columns:
+                1.05fr 1.5fr;
+
+            gap: 55px;
+
+            align-items: start;
+
+            padding: 45px;
+
+            border-radius: 22px;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            box-shadow: var(--shadow);
+        }
+
+        .about-heading h2 {
+            font-size: clamp(32px, 4vw, 46px);
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .about-heading h2 span {
+            color: var(--primary);
+        }
+
+        .about-description {
+            color: var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+        .about-content>p {
+            color: var(--muted);
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            margin-bottom: 28px;
+        }
+
+        .about-points {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 16px;
+        }
+
+        .about-point {
+            padding: 22px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(145deg,
+                    #ffffff,
+                    #f7fbff);
+
+            transition: .3s;
+        }
+
+        .about-point:hover {
+            transform: translateY(-5px);
+
+            border-color: #a8cfff;
+
+            box-shadow:
+                0 15px 35px rgba(30, 90, 180, .09);
+        }
+
+        .about-point-icon {
+            width: 42px;
+            height: 42px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: #edf6ff;
+
+            color: var(--primary);
+
+            margin-bottom: 12px;
+
+            font-size: 18px;
+        }
+
+        .about-point strong {
+            display: block;
+
+            font-size: 16px;
+
+            margin-bottom: 4px;
+        }
+
+        .about-point span {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        .positioning {
+            margin-top: 50px;
+
+            padding: 38px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(135deg,
+                    #071b36,
+                    #0e3f78);
+
+            color: white;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .positioning::after {
+            content: "";
+
+            position: absolute;
+
+            width: 250px;
+            height: 250px;
+
+            border-radius: 50%;
+
+            right: -80px;
+            top: -100px;
+
+            background:
+                rgba(31, 131, 255, .25);
+
+            filter: blur(20px);
+        }
+
+        .positioning .eyebrow {
+            color: #76b8ff;
+        }
+
+        .positioning h3 {
+            font-size: 32px;
+
+            margin-bottom: 12px;
+        }
+
+        .positioning p {
+            max-width: 800px;
+
+            color: #d9e7f7;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* =========================================================
+           SERVICES CATEGORY
+        ========================================================= */
+
+        .service-categories {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+            margin-bottom: 55px;
+        }
+
+        .category-card {
+            position: relative;
+
+            padding: 32px;
+
+            min-height: 240px;
+
+            border-radius: 18px;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            box-shadow:
+                0 12px 35px rgba(40, 70, 120, .06);
+
+            transition: .35s;
+
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 4px;
+
+            background:
+                linear-gradient(90deg,
+                    #287cf2,
+                    #20c8e8);
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 22px 50px rgba(35, 90, 180, .13);
+
+            border-color: #a8cfff;
+        }
+
+        .category-number {
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            margin-bottom: 15px;
+        }
+
+        .category-card h3 {
+            font-size: 25px;
+
+            margin-bottom: 10px;
+
+            line-height: 1.3;
+        }
+
+        .category-card p {
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            min-height: 52px;
+
+            margin-bottom: 20px;
+        }
+
+        .category-link {
+            color: var(--primary);
+
+            font-size: 15px;
+
+            font-weight: 800;
+        }
+
+
+        /* =========================================================
+           DETAILED SERVICES
+        ========================================================= */
+
+        .service-details-title {
+            text-align: center;
+
+            margin-bottom: 35px;
+        }
+
+        .service-details-title h3 {
+            font-size: 28px;
+
+            margin-bottom: 8px;
+        }
+
+        .service-details-title p {
+            color: var(--muted);
+        }
+
+        .services-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 18px;
+        }
+
+        .service-card {
+            padding: 27px;
+
+            min-height: 340px;
+
+            border-radius: 16px;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            box-shadow:
+                0 10px 30px rgba(40, 70, 120, .05);
+
+            transition: .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 20px 45px rgba(35, 90, 180, .12);
+
+            border-color: #a8cfff;
+        }
+
+        .service-number {
+            color: var(--primary);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 18px;
+        }
+
+        .service-icon {
+            width: 58px;
+            height: 58px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 14px;
+
+            background:
+                linear-gradient(135deg,
+                    #e6f2ff,
+                    #f7fbff);
+
+            color: var(--primary);
+
+            font-size: 25px;
+
+            margin-bottom: 18px;
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+
+            margin-bottom: 10px;
+
+            line-height: 1.3;
+        }
+
+        .service-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.6;
+
+            margin-bottom: 16px;
+        }
+
+        .service-list {
+            list-style: none;
+
+            display: grid;
+
+            gap: 6px;
+        }
+
+        .service-list li {
+            font-size: 13px;
+
+            color: #435166;
+
+            padding-left: 15px;
+
+            position: relative;
+        }
+
+        .service-list li::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 9px;
+
+            width: 5px;
+            height: 5px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+        }
+
+
+        /* =========================================================
+           DIGITAL ACCESSIBILITY
+        ========================================================= */
+
+        .accessibility-section {
+            background: #f8fbff;
+        }
+
+        .accessibility-intro {
+            max-width: 850px;
+
+            margin: 0 auto 45px;
+
+            text-align: center;
+        }
+
+        .accessibility-intro h2 {
+            font-size:
+                clamp(34px, 4vw, 50px);
+
+            line-height: 1.2;
+
+            margin-bottom: 15px;
+        }
+
+        .accessibility-intro p {
+            color: var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+        .accessibility-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 22px;
+        }
+
+        .access-card {
+            padding: 32px;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 12px 35px rgba(40, 70, 120, .06);
+
+            transition: .35s;
+        }
+
+        .access-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #a8cfff;
+
+            box-shadow:
+                0 20px 45px rgba(35, 90, 180, .12);
+        }
+
+        .access-icon {
+            width: 58px;
+            height: 58px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 14px;
+
+            background: #eaf4ff;
+
+            color: var(--primary);
+
+            font-size: 25px;
+
+            margin-bottom: 18px;
+        }
+
+        .access-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 10px;
+        }
+
+        .access-card p {
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+        .access-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .access-tag {
+            padding: 6px 10px;
+
+            border-radius: 20px;
+
+            background: #f5faff;
+
+            border:
+                1px solid #c9ddf4;
+
+            color: #245f9f;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           WHY ZORVINTECH
+        ========================================================= */
+
+        .why-section {
+            background: white;
+        }
+
+        .why-intro {
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: 0 auto 45px;
+        }
+
+        .why-intro h2 {
+            font-size:
+                clamp(34px, 4vw, 48px);
+
+            line-height: 1.2;
+
+            margin-bottom: 14px;
+        }
+
+        .why-intro p {
+            color: var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+        .why-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+        .why-card {
+            padding: 30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(145deg,
+                    #ffffff,
+                    #f8fbff);
+
+            transition: .35s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: "◆";
+
+            position: absolute;
+
+            top: 22px;
+            right: 25px;
+
+            color: #b9d9ff;
+
+            font-size: 18px;
+        }
+
+        .why-card:hover {
+            transform: translateY(-7px);
+
+            border-color: #a8cfff;
+
+            box-shadow:
+                0 20px 45px rgba(35, 90, 180, .11);
+        }
+
+        .why-icon {
+            width: 55px;
+            height: 55px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 14px;
+
+            background: #edf6ff;
+
+            color: var(--primary);
+
+            font-size: 24px;
+
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 20px;
+
+            margin-bottom: 10px;
+        }
+
+        .why-card p {
+            color: var(--muted);
+
+            font-size: 15px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           STATS
+        ========================================================= */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            margin-top: 55px;
+
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 10px 30px rgba(30, 70, 130, .05);
+        }
+
+        .stat {
+            padding: 25px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+
+            border-right:
+                1px solid #e3e9f1;
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-icon {
+            width: 50px;
+            height: 50px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: #eff7ff;
+
+            color: var(--primary);
+
+            font-size: 23px;
+        }
+
+        .stat-number {
+            font-size: 27px;
+
+            font-weight: 800;
+        }
+
+        .stat-label {
+            font-size: 14px;
+
+            color: var(--muted);
+
+            line-height: 1.4;
+        }
+
+
+        /* =========================================================
+           CONTACT SECTION
+        ========================================================= */
+
+        .contact-section {
+            background: #f8fbff;
+        }
+
+        .contact-wrapper {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1.2fr;
+
+            gap: 35px;
+        }
+
+        .contact-intro,
+        .contact-card {
+            background: white;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 20px;
+
+            padding: 40px;
+
+            box-shadow:
+                0 12px 35px rgba(40, 70, 120, .06);
+        }
+
+        .contact-intro h2 {
+            font-size:
+                clamp(34px, 4vw, 48px);
+
+            line-height: 1.2;
+
+            margin-bottom: 18px;
+        }
+
+        .contact-intro>p {
+            color: var(--muted);
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            display: grid;
+
+            gap: 18px;
+
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+
+            gap: 14px;
+
+            align-items: center;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 50%;
+
+            background: #eff7ff;
+
+            color: var(--primary);
+
+            font-size: 18px;
+
+            flex-shrink: 0;
+        }
+
+        .contact-item strong {
+            display: block;
+
+            font-size: 14px;
+        }
+
+        .contact-item span,
+        .contact-item a {
+            font-size: 14px;
+
+            color: var(--muted);
+
+            line-height: 1.5;
+        }
+
+        .contact-card h3 {
+            font-size: 27px;
+
+            margin-bottom: 8px;
+        }
+
+        .contact-card>p {
+            color: var(--muted);
+
+            margin-bottom: 22px;
+        }
+
+
+        /* =========================================================
+           PROJECT ENQUIRY
+        ========================================================= */
+
+        .enquiry-section {
+            background: white;
+        }
+
+        .enquiry-container {
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+        .enquiry-header {
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .enquiry-header h2 {
+            font-size:
+                clamp(34px, 4vw, 50px);
+
+            line-height: 1.2;
+
+            margin-bottom: 14px;
+        }
+
+        .enquiry-header p {
+            color: var(--muted);
+
+            font-size: 17px;
+        }
+
+        .enquiry-form {
+            padding: 40px;
+
+            background:
+                linear-gradient(145deg,
+                    #ffffff,
+                    #f7fbff);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 22px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .form-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group {
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 7px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+
+            font-weight: 700;
+
+            color: #27374d;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+
+            border:
+                1px solid #ccd9e8;
+
+            background: #ffffff;
+
+            padding: 14px;
+
+            border-radius: 8px;
+
+            outline: none;
+
+            font-size: 15px;
+
+            color: var(--text);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #697586;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--primary);
+
+            box-shadow:
+                0 0 0 3px rgba(35, 120, 240, .10);
+        }
+
+        textarea {
+            height: 150px;
+
+            resize: vertical;
+        }
+
+        .submit {
+            width: 100%;
+
+            margin-top: 20px;
+
+            border: none;
+
+            color: white;
+
+            padding: 15px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            background:
+                linear-gradient(135deg,
+                    #287df0,
+                    #1455b8);
+
+            transition: .3s;
+        }
+
+        .submit:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px rgba(25, 100, 210, .25);
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #07172B;
+            color: #ffffff;
+            padding: 55px 0 0;
+        }
+
+        .footer-container {
+            width: min(var(--max-width),
+                calc(100% - 50px));
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 1fr 1fr 1fr;
+
+            gap: 65px;
+
+            align-items: start;
+        }
+
+
+        /* =========================================================
+           FOOTER BRAND
+        ========================================================= */
+
+        .footer-brand {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            width: 205px;
+            height: 205px;
+
+            object-fit: contain;
+
+            display: block;
+
+            margin-bottom: 18px;
+
+            background: #ffffff;
+
+            border-radius: 8px;
+        }
+
+        .footer-brand p {
+            max-width: 330px;
+
+            margin: 0;
+
+            color: #a9c0dc;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =========================================================
+           FOOTER COLUMNS
+        ========================================================= */
+
+        .footer-column {
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-start;
+        }
+
+        .footer-column h3 {
+            margin: 5px 0 20px;
+
+            font-size: 16px;
+
+            font-weight: 700;
+
+            color: #ffffff;
+        }
+
+        .footer-column a {
+            display: block;
+
+            margin-bottom: 13px;
+
+            color: #a9c0dc;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+
+            transition:
+                color .3s ease,
+                transform .3s ease;
+        }
+
+        .footer-column a:hover {
+            color: #ffffff;
+
+            transform: translateX(3px);
+        }
+
+
+        /* =========================================================
+           FOOTER BOTTOM
+        ========================================================= */
+
+        .footer-bottom {
+            width: min(var(--max-width),
+                calc(100% - 50px));
+
+            margin: 48px auto 0;
+
+            padding: 21px 0 24px;
+
+            border-top:
+                1px solid rgba(169, 192, 220, .18);
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+
+            color: #8ea7c3;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+        .footer-bottom p:last-child {
+            color: #ffffff;
+
+            text-align: right;
+        }
+
+        .footer-bottom strong {
+            color: #ffffff;
+
+            font-weight: 600;
+        }
+
+        .footer-bottom span {
+            color: #f5b400;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================================
+           ANIMATIONS
+        ========================================================= */
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-18px);
+            }
+        }
+
+        @keyframes rotate {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(35px);
+
+            transition: .8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+
+            transform: translateY(0);
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================= */
+
+        @media(max-width:1000px) {
+
+            .hero-grid,
+            .about-main,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 120px;
+                text-align: center;
+            }
+
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons,
+            .hero-features {
+                justify-content: center;
+            }
+
+            .service-categories {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .accessibility-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .stats {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .stat:nth-child(2) {
+                border-right: none;
+            }
+
+            .stat:nth-child(-n+2) {
+                border-bottom:
+                    1px solid #e3e9f1;
+            }
+
+
+            /* FOOTER TABLET */
+
+            .footer-container {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 45px 35px;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+
+            .footer-logo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media(max-width:700px) {
+
+            .container {
+                width: calc(100% - 28px);
+            }
+
+            .nav-links,
+            .nav-action {
+                display: none;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.active {
+                display: block;
+            }
+
+
+            /* BRAND */
+
+            header {
+                height: 78px;
+            }
+
+            .nav {
+                height: 78px;
+            }
+
+            .brand {
+                gap: 8px;
+            }
+
+            .brand img {
+                width: 42px;
+                height: 42px;
+            }
+
+            .brand-name {
+                font-size: 18px;
+            }
+
+            .private {
+                font-size: 10px;
+                letter-spacing: .7px;
+            }
+
+            .brand-tag {
+                font-size: 8px;
+                margin-top: 4px;
+            }
+
+
+            /* HERO */
+
+            .hero {
+                min-height: auto;
+
+                padding-top: 110px;
+
+                padding-bottom: 60px;
+            }
+
+            .hero h1 {
+                font-size:
+                    clamp(38px, 10vw, 48px);
+
+                line-height: 1.15;
+
+                letter-spacing: -1px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+
+                line-height: 1.7;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+
+                align-items: stretch;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
+            .hero-visual {
+                min-height: 380px;
+            }
+
+            .hero-logo {
+                width: 300px;
+                height: 300px;
+
+                object-fit: contain;
+
+                border-radius: 50%;
+
+                padding: 25px;
+
+                background:
+                    radial-gradient(circle at center,
+                        #ffffff 0%,
+                        #f4f9ff 65%,
+                        #e6f3ff 100%);
+
+                border:
+                    2px solid rgba(31, 131, 255, .25);
+
+                box-shadow:
+                    0 25px 60px rgba(20, 90, 180, .20);
+            }
+
+            .orbit {
+                width: 300px;
+                height: 300px;
+            }
+
+            .platform {
+                width: 290px;
+            }
+
+            .hero-features {
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+
+            .hero-feature {
+                font-size: 13px;
+                padding-right: 8px;
+            }
+
+
+            /* ABOUT */
+
+            .about-main {
+                padding: 25px;
+            }
+
+            .about-heading h2 {
+                font-size: 26px;
+            }
+
+            .about-points {
+                grid-template-columns: 1fr;
+            }
+
+            .positioning {
+                padding: 28px 22px;
+            }
+
+            .positioning h3 {
+                font-size: 27px;
+            }
+
+
+            /* SECTIONS */
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .service-categories,
+            .services-grid,
+            .accessibility-grid,
+            .why-grid,
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card {
+                min-height: auto;
+            }
+
+            .category-card {
+                min-height: auto;
+            }
+
+
+            /* CONTACT */
+
+            .contact-intro,
+            .contact-card,
+            .enquiry-form {
+                padding: 28px 22px;
+            }
+
+            .contact-intro h2 {
+                font-size: 35px;
+            }
+
+
+            /* FORM */
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            input,
+            select,
+            textarea {
+                font-size: 16px;
+            }
+
+
+            /* STATS */
+
+            .stat {
+                border-right: none;
+
+                border-bottom:
+                    1px solid #e3e9f1;
+            }
+
+            .stat:last-child {
+                border-bottom: none;
+            }
+
+
+            /* FOOTER */
+
+            footer {
+                padding-top: 45px;
+            }
+
+            .footer-container {
+                width: 88%;
+
+                grid-template-columns: 1fr;
+
+                gap: 34px;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+
+                align-items: flex-start;
+            }
+
+            .footer-logo {
+                width: 155px;
+                height: 155px;
+            }
+
+            .footer-brand p {
+                max-width: 100%;
+
+                font-size: 13px;
+            }
+
+            .footer-column h3 {
+                margin-bottom: 15px;
+
+                font-size: 15px;
+            }
+
+            .footer-column a {
+                margin-bottom: 10px;
+
+                font-size: 13px;
+            }
+
+            .footer-bottom {
+                width: 88%;
+
+                margin-top: 35px;
+
+                padding: 20px 0;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                gap: 10px;
+            }
+
+            .footer-bottom p {
+                font-size: 12px;
+            }
+
+            .footer-bottom p:last-child {
+                text-align: left;
+            }
+        }
+
+
+        /* =========================================================
+           EXTRA SMALL
+        ========================================================= */
+
+        @media(max-width:400px) {
+
+            .brand img {
+                width: 38px;
+                height: 38px;
+            }
+
+            .brand-name {
+                font-size: 16px;
+            }
+
+            .private {
+                font-size: 9px;
+            }
+
+            .brand-tag {
+                font-size: 7px;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .hero-logo {
+                width: 275px;
+                height: 275px;
+            }
+
+            .orbit {
+                width: 250px;
+                height: 250px;
+            }
+
+            .platform {
+                width: 240px;
+            }
+
+            .section-title h2 {
+                font-size: 29px;
+            }
+
+            .footer-logo {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================= -->
+
+    <header>
+
+        <div class="container">
+
+            <div class="nav">
+
+                <a href="#home" class="brand">
+
+                    <img src="images/zorvin-logo.png"
+                        alt="ZorvinTech Logo">
+
+                    <div class="brand-text">
+
+                        <div class="brand-name">
+                            ZORVIN<span class="tech">TECH</span>
+                        </div>
+
+                        <div class="private">
+                            PRIVATE LIMITED
+                        </div>
+
+                        <div class="brand-tag">
+                            Technology. Accessibility. Innovation.
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <nav class="nav-links">
+
+                    <a href="#home">Home</a>
+
+                    <a href="#about">About</a>
+
+                    <a href="#services">Services</a>
+
+                    <a href="#accessibility">Accessibility</a>
+
+                    <a href="#why-us">Why Us</a>
+
+                    <a href="#contact">Contact</a>
+
+                </nav>
+
+
+                <a href="#project-enquiry"
+                    class="btn btn-primary nav-action">
+
+                    Start a Project →
+
+                </a>
+
+
+                <button class="menu-btn"
+                    id="menuBtn"
+                    aria-label="Open navigation menu">
+
+                    ☰
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="mobile-menu"
+            id="mobileMenu">
+
+            <a href="#home">Home</a>
+
+            <a href="#about">About</a>
+
+            <a href="#services">Services</a>
+
+            <a href="#accessibility">
+                Accessibility
+            </a>
+
+            <a href="#why-us">
+                Why Us
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+            <a href="#project-enquiry">
+                Project Enquiry
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-grid">
+
+                <div class="hero-content reveal">
+
+                    <div class="eyebrow">
+                        ZORVINTECH PRIVATE LIMITED
+                    </div>
+
+                    <h1>
+                        Building Accessible
+                        Digital Experiences
+                        for <span>Everyone.</span>
+                    </h1>
+
+                    <p class="hero-description">
+
+                        We help organizations create inclusive,
+                        accessible and future-ready digital
+                        solutions through technology,
+                        innovation and accessibility.
+
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#project-enquiry"
+                            class="btn btn-primary">
+
+                            Discuss Your Project →
+
+                        </a>
+
+                        <a href="#services"
+                            class="btn btn-outline">
+
+                            Explore Services
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-features">
+
+                        <div class="hero-feature">
+
+                            <div class="feature-icon">
+                                ♿
+                            </div>
+
+                            <span>
+                                Accessibility<br>
+                                Focused
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-feature">
+
+                            <div class="feature-icon">
+                                ⚙
+                            </div>
+
+                            <span>
+                                Technology<br>
+                                Driven
+                            </span>
+
+                        </div>
+
+
+                        <div class="hero-feature">
+
+                            <div class="feature-icon">
+                                💡
+                            </div>
+
+                            <span>
+                                Innovation<br>
+                                Oriented
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-visual reveal">
+
+                    <div class="network"></div>
+
+                    <div class="orbit"></div>
+
+                    <div class="logo-glow"></div>
+
+                    <img src="images/zorvin-logo.png"
+                        class="hero-logo"
+                        alt="ZorvinTech Logo">
+
+                    <div class="platform"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         ABOUT ZORVINTECH
+    ========================================================= -->
+
+    <section class="section about-section"
+        id="about">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <div class="eyebrow">
+                    ABOUT ZORVINTECH
+                </div>
+
+                <h2>
+                    Technology-first. Business-focused.
+                </h2>
+
+            </div>
+
+
+            <div class="about-main reveal">
+
+                <div class="about-heading">
+
+                    <h2>
+                        Technology-first.
+                        <span>Business-focused.</span>
+                    </h2>
+
+                    <p class="about-description">
+
+                        Zorvintech Private Limited is an
+                        India-focused technology and business
+                        services company helping organizations
+                        improve digital experiences, workflows
+                        and technology operations.
+
+                    </p>
+
+                </div>
+
+
+                <div class="about-content">
+
+                    <p>
+
+                        Our approach is simple: understand the
+                        requirement, select the right technology,
+                        deliver with discipline and create
+                        measurable business value.
+
+                    </p>
+
+
+                    <div class="about-points">
+
+                        <div class="about-point">
+
+                            <div class="about-point-icon">
+                                🇮🇳
+                            </div>
+
+                            <strong>
+                                India-Focused
+                            </strong>
+
+                            <span>
+                                Pan-India service delivery
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-point">
+
+                            <div class="about-point-icon">
+                                ⚙
+                            </div>
+
+                            <strong>
+                                Technology-Driven
+                            </strong>
+
+                            <span>
+                                Solutions aligned to requirements
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-point">
+
+                            <div class="about-point-icon">
+                                ✓
+                            </div>
+
+                            <strong>
+                                Quality-Oriented
+                            </strong>
+
+                            <span>
+                                Structured testing and review
+                            </span>
+
+                        </div>
+
+
+                        <div class="about-point">
+
+                            <div class="about-point-icon">
+                                ↔
+                            </div>
+
+                            <strong>
+                                Flexible
+                            </strong>
+
+                            <span>
+                                Project and ongoing support models
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="positioning reveal">
+
+                <div class="eyebrow">
+                    OUR POSITIONING
+                </div>
+
+                <h3>
+                    Strength. Vision. Technology.
+                </h3>
+
+                <p>
+
+                    We combine technology capability with
+                    practical business understanding to
+                    build, improve and support digital
+                    initiatives.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SERVICES
+    ========================================================= -->
+
+    <section class="section"
+        id="services">
+
+        <div class="container">
+
+            <div class="section-title reveal">
+
+                <div class="eyebrow">
+                    OUR SERVICES
+                </div>
+
+                <h2>
+                    Technology & Business Solutions
+                </h2>
+
+            </div>
+
+
+            <div class="service-categories">
+
+                <div class="category-card reveal"
+                    id="it-services">
+
+                    <div class="category-number">
+                        01 — IT SERVICES
+                    </div>
+
+                    <h3>
+                        Technology Solutions
+                    </h3>
+
+                    <p>
+                        Software, AI, web, mobile, cloud
+                        and process automation.
+                    </p>
+
+                    <a href="#software-technology"
+                        class="category-link">
+                        Explore IT Services →
+                    </a>
+
+                </div>
+
+
+                <div class="category-card reveal"
+                    id="digital-services">
+
+                    <div class="category-number">
+                        02 — DIGITAL & BUSINESS
+                    </div>
+
+                    <h3>
+                        Digital & Business Services
+                    </h3>
+
+                    <p>
+                        Accessibility, document services
+                        and practical operational support.
+                    </p>
+
+                    <a href="#digital-accessibility"
+                        class="category-link">
+                        Explore Services →
+                    </a>
+
+                </div>
+
+
+                <div class="category-card reveal"
+                    id="consulting">
+
+                    <div class="category-number">
+                        03 — CONSULTING
+                    </div>
+
+                    <h3>
+                        IT Consulting
+                    </h3>
+
+                    <p>
+                        Technology strategy, architecture,
+                        transformation and IT planning.
+                    </p>
+
+                    <a href="#it-consulting"
+                        class="category-link">
+                        Explore Consulting →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="service-details-title reveal">
+
+                <h3>
+                    Our Core Capabilities
+                </h3>
+
+                <p>
+                    Practical technology, accessibility and
+                    business solutions designed around
+                    real-world requirements.
+                </p>
+
+            </div>
+
+
+            <div class="services-grid">
+
+                <div class="service-card reveal"
+                    id="software-technology">
+
+                    <div class="service-number">
+                        01
+                    </div>
+
+                    <div class="service-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Software & Technology
+                    </h3>
+
+                    <p>
+                        Custom technology solutions aligned
+                        with business requirements.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            Java • Python • C#
+                        </li>
+
+                        <li>
+                            Node.js • REST APIs
+                        </li>
+
+                        <li>
+                            SQL • Git
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">
+                        02
+                    </div>
+
+                    <div class="service-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        AI-Based Projects
+                    </h3>
+
+                    <p>
+                        Practical AI applications,
+                        integrations and intelligent workflows.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            Python • LLM • NLP
+                        </li>
+
+                        <li>
+                            AI APIs & automation
+                        </li>
+
+                        <li>
+                            Document intelligence
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">
+                        03
+                    </div>
+
+                    <div class="service-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Web & Mobile
+                    </h3>
+
+                    <p>
+                        Modern applications and websites
+                        designed for real business use.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            HTML • CSS • JavaScript
+                        </li>
+
+                        <li>
+                            React • Node.js
+                        </li>
+
+                        <li>
+                            Flutter • Android • iOS
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">
+                        04
+                    </div>
+
+                    <div class="service-icon">
+                        ☁️
+                    </div>
+
+                    <h3>
+                        Cloud & IT Solutions
+                    </h3>
+
+                    <p>
+                        Cloud and infrastructure support
+                        for reliable digital delivery.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            AWS • Azure • Google Cloud
+                        </li>
+
+                        <li>
+                            Linux • Docker
+                        </li>
+
+                        <li>
+                            CI/CD • Git
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="service-card reveal"
+                    id="digital-accessibility">
+
+                    <div class="service-number">
+                        05
+                    </div>
+
+                    <div class="service-icon">
+                        ♿
+                    </div>
+
+                    <h3>
+                        Digital Accessibility
+                    </h3>
+
+                    <p>
+                        Accessible documents and digital
+                        experiences across major platforms.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            PDF • Word • PowerPoint • Excel
+                        </li>
+
+                        <li>
+                            EPUB • Web • Mobile
+                        </li>
+
+                        <li>
+                            Testing & validation
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">
+                        06
+                    </div>
+
+                    <div class="service-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Business Services
+                    </h3>
+
+                    <p>
+                        Operational support that helps
+                        businesses work more efficiently.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            Documentation support
+                        </li>
+
+                        <li>
+                            Administrative support
+                        </li>
+
+                        <li>
+                            Business process support
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="service-card reveal"
+                    id="it-consulting">
+
+                    <div class="service-number">
+                        07
+                    </div>
+
+                    <div class="service-icon">
+                        🧩
+                    </div>
+
+                    <h3>
+                        IT Consulting
+                    </h3>
+
+                    <p>
+                        Technical guidance for planning,
+                        modernization and transformation.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            Technology strategy
+                        </li>
+
+                        <li>
+                            Architecture & infrastructure
+                        </li>
+
+                        <li>
+                            Digital transformation
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="service-card reveal">
+
+                    <div class="service-number">
+                        08
+                    </div>
+
+                    <div class="service-icon">
+                        ⚙️
+                    </div>
+
+                    <h3>
+                        Process Automation
+                    </h3>
+
+                    <p>
+                        Automation solutions that reduce
+                        repetitive work and improve workflows.
+                    </p>
+
+                    <ul class="service-list">
+
+                        <li>
+                            Python • APIs • RPA
+                        </li>
+
+                        <li>
+                            Workflow automation
+                        </li>
+
+                        <li>
+                            Data & document processing
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         DIGITAL ACCESSIBILITY
+    ========================================================= -->
+
+    <section class="section accessibility-section"
+        id="accessibility">
+
+        <div class="container">
+
+            <div class="accessibility-intro reveal">
+
+                <div class="eyebrow">
+                    DIGITAL ACCESSIBILITY
+                </div>
+
+                <h2>
+                    Accessible experiences across
+                    documents, web, mobile and EPUB.
+                </h2>
+
+                <p>
+                    Accessibility services delivered with
+                    reference to applicable standards,
+                    regulations and project requirements.
+                </p>
+
+            </div>
+
+
+            <div class="accessibility-grid">
+
+                <div class="access-card reveal">
+
+                    <div class="access-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Document Accessibility
+                    </h3>
+
+                    <p>
+                        Accessible PDF, Word, PowerPoint,
+                        Excel and EPUB remediation and
+                        validation.
+                    </p>
+
+                    <div class="access-tags">
+
+                        <span class="access-tag">
+                            PDF/UA
+                        </span>
+
+                        <span class="access-tag">
+                            EPUB 3
+                        </span>
+
+                        <span class="access-tag">
+                            PAC
+                        </span>
+
+                        <span class="access-tag">
+                            NVDA
+                        </span>
+
+                        <span class="access-tag">
+                            JAWS
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="access-card reveal">
+
+                    <div class="access-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Web & Mobile Accessibility
+                    </h3>
+
+                    <p>
+                        Accessibility assessment,
+                        remediation and assistive
+                        technology testing.
+                    </p>
+
+                    <div class="access-tags">
+
+                        <span class="access-tag">
+                            WCAG 2.1/2.2
+                        </span>
+
+                        <span class="access-tag">
+                            HTML5
+                        </span>
+
+                        <span class="access-tag">
+                            ARIA
+                        </span>
+
+                        <span class="access-tag">
+                            axe
+                        </span>
+
+                        <span class="access-tag">
+                            WAVE
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="access-card reveal">
+
+                    <div class="access-icon">
+                        🇮🇳
+                    </div>
+
+                    <h3>
+                        India Standards & Regulations
+                    </h3>
+
+                    <p>
+                        Accessibility work with reference
+                        to applicable Indian requirements.
+                    </p>
+
+                    <div class="access-tags">
+
+                        <span class="access-tag">
+                            RPwD Act 2016
+                        </span>
+
+                        <span class="access-tag">
+                            RPwD Rules 2017
+                        </span>
+
+                        <span class="access-tag">
+                            GIGW 3.0
+                        </span>
+
+                        <span class="access-tag">
+                            BIS ICT Standards
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="access-card reveal">
+
+                    <div class="access-icon">
+                        🌍
+                    </div>
+
+                    <h3>
+                        International Standards
+                    </h3>
+
+                    <p>
+                        Support for projects requiring
+                        recognized international
+                        accessibility standards.
+                    </p>
+
+                    <div class="access-tags">
+
+                        <span class="access-tag">
+                            WCAG
+                        </span>
+
+                        <span class="access-tag">
+                            PDF/UA
+                        </span>
+
+                        <span class="access-tag">
+                            EN 301 549
+                        </span>
+
+                        <span class="access-tag">
+                            Section 508
+                        </span>
+
+                        <span class="access-tag">
+                            EAA
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         WHY ZORVINTECH
+    ========================================================= -->
+
+    <section class="section why-section"
+        id="why-us">
+
+        <div class="container">
+
+            <div class="why-intro reveal">
+
+                <div class="eyebrow">
+                    WHY ZORVINTECH
+                </div>
+
+                <h2>
+                    Technology expertise.
+                    Structured delivery.
+                    Long-term value.
+                </h2>
+
+                <p>
+                    A practical approach designed around
+                    your business requirement, technical
+                    scope and delivery priorities.
+                </p>
+
+            </div>
+
+
+            <div class="why-grid">
+
+                <div class="why-card reveal">
+
+                    <div class="why-icon">
+                        ◆
+                    </div>
+
+                    <h3>
+                        Business-Focused
+                    </h3>
+
+                    <p>
+                        Technology aligned with real
+                        business requirements and outcomes.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card reveal">
+
+                    <div class="why-icon">
+                        👁
+                    </div>
+
+                    <h3>
+                        Transparent Delivery
+                    </h3>
+
+                    <p>
+                        Clear communication, milestones and
+                        project visibility.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card reveal">
+
+                    <div class="why-icon">
+                        ↔
+                    </div>
+
+                    <h3>
+                        Flexible Engagement
+                    </h3>
+
+                    <p>
+                        Project, consulting and ongoing
+                        support models.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card reveal">
+
+                    <div class="why-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Quality-Driven
+                    </h3>
+
+                    <p>
+                        Structured review, testing and
+                        quality assurance.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card reveal">
+
+                    <div class="why-icon">
+                        🇮🇳
+                    </div>
+
+                    <h3>
+                        India-Focused
+                    </h3>
+
+                    <p>
+                        Technology services and support for
+                        organizations across India.
+                    </p>
+
+                </div>
+
+
+                <div class="why-card reveal">
+
+                    <div class="why-icon">
+                        🤝
+                    </div>
+
+                    <h3>
+                        Long-Term Partnership
+                    </h3>
+
+                    <p>
+                        Ongoing support as your technology
+                        requirements evolve.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stats reveal">
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        🏛
+                    </div>
+
+                    <div>
+
+                        <div class="stat-number">
+                            100+
+                        </div>
+
+                        <div class="stat-label">
+                            Projects Delivered
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        ☆
+                    </div>
+
+                    <div>
+
+                        <div class="stat-number">
+                            98%
+                        </div>
+
+                        <div class="stat-label">
+                            Client Satisfaction
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        👥
+                    </div>
+
+                    <div>
+
+                        <div class="stat-number">
+                            5+
+                        </div>
+
+                        <div class="stat-label">
+                            Technology Experts
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <div class="stat-icon">
+                        🎧
+                    </div>
+
+                    <div>
+
+                        <div class="stat-number">
+                            24/7
+                        </div>
+
+                        <div class="stat-label">
+                            Support & Assistance
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         CONTACT
+    ========================================================= -->
+
+    <section class="section contact-section"
+        id="contact">
+
+        <div class="container">
+
+            <div class="contact-wrapper">
+
+                <div class="contact-intro reveal">
+
+                    <div class="eyebrow">
+                        CONTACT US
+                    </div>
+
+                    <h2>
+                        Let's Build Something
+                        Great Together.
+                    </h2>
+
+                    <p>
+                        Have a question about our services,
+                        accessibility solutions or technology
+                        capabilities? Get in touch with our team.
+                    </p>
+
+
+                    <div class="contact-details">
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                ✉
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Email
+                                </strong>
+
+                                <a href="mailto:info@zorvintech.in">
+                                    info@zorvintech.in
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                ☎
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    WhatsApp
+                                </strong>
+
+                                <a href="https://wa.me/919666910109"
+                                    target="_blank"
+                                    rel="noopener">
+                                    +91 96669 10109
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+                                📍
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Office
+                                </strong>
+
+                                <span>
+                                    Visakhapatnam,
+                                    Andhra Pradesh, India
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card reveal">
+
+                    <div class="eyebrow">
+                        CONNECT WITH US
+                    </div>
+
+                    <h3>
+                        Have a technology requirement?
+                    </h3>
+
+                    <p>
+                        Tell us what you need and our team
+                        can help identify the right approach.
+                    </p>
+
+                    <a href="#project-enquiry"
+                        class="btn btn-primary">
+                        Send Project Enquiry →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PROJECT ENQUIRY
+    ========================================================= -->
+
+    <section class="section enquiry-section"
+        id="project-enquiry">
+
+        <div class="container enquiry-container">
+
+            <div class="enquiry-header reveal">
+
+                <div class="eyebrow">
+                    PROJECT ENQUIRY
+                </div>
+
+                <h2>
+                    Let's Discuss Your Project.
+                </h2>
+
+                <p>
+                    Share your requirements, and we'll
+                    get back to you with the next steps.
+                </p>
+
+            </div>
+
+
+            <div class="enquiry-form reveal">
+
+                <form id="projectForm">
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label for="projectName">
+                                Your Name
+                            </label>
+
+                            <input type="text"
+                                id="projectName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="projectEmail">
+                                Email Address
+                            </label>
+
+                            <input type="email"
+                                id="projectEmail"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="company">
+                                Company / Organization
+                            </label>
+
+                            <input type="text"
+                                id="company"
+                                placeholder="Company or organization name">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="projectService">
+                                Service Required
+                            </label>
+
+                            <select id="projectService"
+                                required>
+
+                                <option value="">
+                                    Select a service
+                                </option>
+
+                                <option>
+                                    Software & Technology
+                                </option>
+
+                                <option>
+                                    AI-Based Projects
+                                </option>
+
+                                <option>
+                                    Web & Mobile
+                                </option>
+
+                                <option>
+                                    Cloud & IT Solutions
+                                </option>
+
+                                <option>
+                                    Digital Accessibility
+                                </option>
+
+                                <option>
+                                    Business Services
+                                </option>
+
+                                <option>
+                                    IT Consulting
+                                </option>
+
+                                <option>
+                                    Process Automation
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="projectBudget">
+                                Project Scope / Budget
+                            </label>
+
+                            <select id="projectBudget">
+
+                                <option value="">
+                                    Select an option
+                                </option>
+
+                                <option>
+                                    To be discussed
+                                </option>
+
+                                <option>
+                                    Small Project
+                                </option>
+
+                                <option>
+                                    Medium Project
+                                </option>
+
+                                <option>
+                                    Large Project
+                                </option>
+
+                                <option>
+                                    Ongoing Engagement
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group full">
+
+                            <label for="projectMessage">
+                                Project Details
+                            </label>
+
+                            <textarea id="projectMessage"
+                                placeholder="Tell us about your project, requirements and goals..."
+                                required></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit"
+                        class="submit">
+
+                        Send Project Enquiry →
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+
+            <!-- ZORVINTECH LOGO + DESCRIPTION -->
+
+            <div class="footer-brand">
+
+                <img src="images/zorvin-logo.png"
+                    alt="Zorvintech Private Limited Logo"
+                    class="footer-logo">
+
+                <p>
+                    Technology, digital accessibility,
+                    AI and business solutions for
+                    organizations across India.
+                </p>
+
+            </div>
+
+
+            <!-- BUSINESS AREAS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Business Areas
+                </h3>
+
+                <a href="#services">
+                    IT Services
+                </a>
+
+                <a href="#digital-services">
+                    Digital &amp; Business Services
+                </a>
+
+                <a href="#consulting">
+                    IT Consulting
+                </a>
+
+            </div>
+
+
+            <!-- COMPANY -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Company
+                </h3>
+
+                <a href="#about">
+                    About Zorvintech
+                </a>
+
+                <a href="#services">
+                    Services
+                </a>
+
+                <a href="#why-us">
+                    Why Zorvintech
+                </a>
+
+                <a href="#accessibility">
+                    Accessibility
+                </a>
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="mailto:info@zorvintech.in">
+                    info@zorvintech.in
+                </a>
+
+                <a href="tel:+919666910109">
+                    +91 96669 10109
+                </a>
+
+                <a href="https://wa.me/919666910109"
+                    target="_blank"
+                    rel="noopener">
+
+                    WhatsApp
+
+                </a>
+
+                <a href="#project-enquiry">
+
+                    Send Requirement →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- FOOTER BOTTOM -->
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="currentYear"></span>
+                Zorvintech Private Limited.
+                All rights reserved.
+            </p>
+
+            <p>
+                Strength <strong>•</strong>
+                Vision <strong>•</strong>
+                <span>Technology</span>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const mobileMenu =
+            document.getElementById("mobileMenu");
+
+
+        menuBtn.addEventListener(
+            "click",
+            () => {
+
+                mobileMenu.classList.toggle("active");
+
+                menuBtn.textContent =
+                    mobileMenu.classList.contains("active")
+                        ? "✕"
+                        : "☰";
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(".mobile-menu a")
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        mobileMenu
+                            .classList
+                            .remove("active");
+
+                        menuBtn.textContent = "☰";
+
+                    }
+                );
+
+            });
+
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        const elements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target
+                                .classList
+                                .add("active");
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: .12
+                }
+
+            );
+
+
+        elements.forEach(element => {
+
+            observer.observe(element);
+
+        });
+
+
+
+        /* =========================================================
+           PROJECT ENQUIRY FORM
+        ========================================================= */
+
+        document
+            .getElementById("projectForm")
+            .addEventListener(
+                "submit",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const name =
+                        document
+                            .getElementById("projectName")
+                            .value;
+
+
+                    const email =
+                        document
+                            .getElementById("projectEmail")
+                            .value;
+
+
+                    const company =
+                        document
+                            .getElementById("company")
+                            .value;
+
+
+                    const service =
+                        document
+                            .getElementById("projectService")
+                            .value;
+
+
+                    const budget =
+                        document
+                            .getElementById("projectBudget")
+                            .value;
+
+
+                    const message =
+                        document
+                            .getElementById("projectMessage")
+                            .value;
+
+
+                    const subject =
+                        encodeURIComponent(
+                            "New Project Enquiry - ZorvinTech"
+                        );
+
+
+                    const body =
+                        encodeURIComponent(
+
+                            "Name: " +
+                            name +
+
+                            "\n\nEmail: " +
+                            email +
+
+                            "\n\nCompany / Organization: " +
+                            company +
+
+                            "\n\nService Required: " +
+                            service +
+
+                            "\n\nProject Scope / Budget: " +
+                            budget +
+
+                            "\n\nProject Details:\n" +
+                            message
+
+                        );
+
+
+                    window.location.href =
+                        "mailto:info@zorvintech.in" +
+                        "?subject=" +
+                        subject +
+                        "&body=" +
+                        body;
+
+                }
+            );
+
+
+
+        /* =========================================================
+           FOOTER YEAR
+        ========================================================= */
+
+        document
+            .getElementById("currentYear")
+            .textContent =
+            new Date().getFullYear();
+
+    </script>
+
+</body>
+
+</html>
